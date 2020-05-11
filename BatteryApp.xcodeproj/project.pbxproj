@@ -7,25 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF8FA0B32469B60000732386 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8FA0B12469B60000732386 /* RegisterViewController.swift */; };
+		EF8FA0B42469B60000732386 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8FA0B22469B60000732386 /* LoginViewController.swift */; };
 		EFB2EF9D246868A90017DB55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2EF9C246868A90017DB55 /* AppDelegate.swift */; };
 		EFB2EF9F246868A90017DB55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2EF9E246868A90017DB55 /* SceneDelegate.swift */; };
-		EFB2EFA1246868A90017DB55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2EFA0246868A90017DB55 /* ViewController.swift */; };
 		EFB2EFA4246868A90017DB55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB2EFA2246868A90017DB55 /* Main.storyboard */; };
 		EFB2EFA7246868A90017DB55 /* BatteryApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EFB2EFA5246868A90017DB55 /* BatteryApp.xcdatamodeld */; };
 		EFB2EFA9246868AC0017DB55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB2EFA8246868AC0017DB55 /* Assets.xcassets */; };
 		EFB2EFAC246868AC0017DB55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB2EFAA246868AC0017DB55 /* LaunchScreen.storyboard */; };
+		EFB2EFB424686AB10017DB55 /* BatteryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2EFB324686AB10017DB55 /* BatteryTableViewController.swift */; };
+		EFB2EFB624686BD80017DB55 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2EFB524686BD80017DB55 /* AppModel.swift */; };
+		EFB2EFB824686D6D0017DB55 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2EFB724686D6D0017DB55 /* AppInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF8FA0B12469B60000732386 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		EF8FA0B22469B60000732386 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EFB2EF99246868A90017DB55 /* BatteryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatteryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB2EF9C246868A90017DB55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFB2EF9E246868A90017DB55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EFB2EFA0246868A90017DB55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EFB2EFA3246868A90017DB55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFB2EFA6246868A90017DB55 /* BatteryApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BatteryApp.xcdatamodel; sourceTree = "<group>"; };
 		EFB2EFA8246868AC0017DB55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFB2EFAB246868AC0017DB55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFB2EFAD246868AC0017DB55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFB2EFB324686AB10017DB55 /* BatteryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryTableViewController.swift; sourceTree = "<group>"; };
+		EFB2EFB524686BD80017DB55 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		EFB2EFB724686D6D0017DB55 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF8FA0B52469B63B00732386 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EFB2EFB324686AB10017DB55 /* BatteryTableViewController.swift */,
+				EF8FA0B22469B60000732386 /* LoginViewController.swift */,
+				EF8FA0B12469B60000732386 /* RegisterViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		EFB2EF90246868A90017DB55 = {
 			isa = PBXGroup;
 			children = (
@@ -60,8 +78,10 @@
 			children = (
 				EFB2EF9C246868A90017DB55 /* AppDelegate.swift */,
 				EFB2EF9E246868A90017DB55 /* SceneDelegate.swift */,
-				EFB2EFA0246868A90017DB55 /* ViewController.swift */,
 				EFB2EFA2246868A90017DB55 /* Main.storyboard */,
+				EF8FA0B52469B63B00732386 /* Controllers */,
+				EFB2EFB724686D6D0017DB55 /* AppInfo.swift */,
+				EFB2EFB524686BD80017DB55 /* AppModel.swift */,
 				EFB2EFA8246868AC0017DB55 /* Assets.xcassets */,
 				EFB2EFAA246868AC0017DB55 /* LaunchScreen.storyboard */,
 				EFB2EFAD246868AC0017DB55 /* Info.plist */,
@@ -141,10 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFB2EFA1246868A90017DB55 /* ViewController.swift in Sources */,
 				EFB2EF9D246868A90017DB55 /* AppDelegate.swift in Sources */,
+				EFB2EFB424686AB10017DB55 /* BatteryTableViewController.swift in Sources */,
+				EF8FA0B32469B60000732386 /* RegisterViewController.swift in Sources */,
 				EFB2EF9F246868A90017DB55 /* SceneDelegate.swift in Sources */,
+				EF8FA0B42469B60000732386 /* LoginViewController.swift in Sources */,
+				EFB2EFB624686BD80017DB55 /* AppModel.swift in Sources */,
 				EFB2EFA7246868A90017DB55 /* BatteryApp.xcdatamodeld in Sources */,
+				EFB2EFB824686D6D0017DB55 /* AppInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
