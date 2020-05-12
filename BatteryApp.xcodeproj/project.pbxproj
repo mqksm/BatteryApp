@@ -18,6 +18,7 @@
 		EFB2EFB424686AB10017DB55 /* BatteryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2EFB324686AB10017DB55 /* BatteryTableViewController.swift */; };
 		EFB2EFB624686BD80017DB55 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2EFB524686BD80017DB55 /* AppModel.swift */; };
 		EFB2EFB824686D6D0017DB55 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2EFB724686D6D0017DB55 /* AppInfo.swift */; };
+		EFCC832B246A9BCF008C994B /* StorageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC832A246A9BCF008C994B /* StorageTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		EFB2EFB324686AB10017DB55 /* BatteryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryTableViewController.swift; sourceTree = "<group>"; };
 		EFB2EFB524686BD80017DB55 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		EFB2EFB724686D6D0017DB55 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		EFCC832A246A9BCF008C994B /* StorageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,9 +52,10 @@
 		EF8FA0B52469B63B00732386 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EFB2EFB324686AB10017DB55 /* BatteryTableViewController.swift */,
 				EF8FA0B22469B60000732386 /* LoginViewController.swift */,
 				EF8FA0B12469B60000732386 /* RegisterViewController.swift */,
+				EFB2EFB324686AB10017DB55 /* BatteryTableViewController.swift */,
+				EFCC832A246A9BCF008C994B /* StorageTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFB2EF9D246868A90017DB55 /* AppDelegate.swift in Sources */,
+				EFCC832B246A9BCF008C994B /* StorageTableViewController.swift in Sources */,
 				EFB2EFB424686AB10017DB55 /* BatteryTableViewController.swift in Sources */,
 				EF8FA0B32469B60000732386 /* RegisterViewController.swift in Sources */,
 				EFB2EF9F246868A90017DB55 /* SceneDelegate.swift in Sources */,
@@ -315,6 +319,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F68JF4M4B8;
 				INFOPLIST_FILE = BatteryApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,7 +327,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = example.max.BatteryApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -333,6 +338,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F68JF4M4B8;
 				INFOPLIST_FILE = BatteryApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,7 +346,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = example.max.BatteryApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -16,7 +16,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // hide keyboard
+        view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
         
     }
     
@@ -26,6 +27,7 @@ class LoginViewController: UIViewController {
         passwordField.text = ""
     }
     
+//    authorization
     @IBAction func login() {
         guard let login = loginField.text, let password = passwordField.text, loginField.text != "", passwordField.text != ""
             else { getAlert(message: "Fill all fields")
@@ -40,9 +42,8 @@ class LoginViewController: UIViewController {
         
         do {
             let result = try context.fetch(request) as! [NSManagedObject]
-            print(result)
             if result.count == 1 {
-                performSegue(withIdentifier: "segueTableView", sender: self)
+                performSegue(withIdentifier: "segueBatteryTableView", sender: self)
             } else {
                 getAlert(message: "Incorrect login or password")
                 
@@ -60,5 +61,17 @@ class LoginViewController: UIViewController {
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard segue.identifier == "segueBatteryTableView" else { return }
+        let navigationVC = segue.destination as! UINavigationController
+        let batteryTVC = navigationVC.topViewController as! BatteryTableViewController
+        batteryTVC.userName = loginField.text ?? ""
+        
+    }
+    
+    
+    
     
 }

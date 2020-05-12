@@ -16,10 +16,11 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+//        hide keyboard
+        view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
+
     }
-    
+//    Registration
     @IBAction func register() {
         
         guard let login = loginField.text, let password = passwordField.text, loginField.text != "", passwordField.text != ""
@@ -53,6 +54,5 @@ class RegisterViewController: UIViewController {
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
     }
-    
     
 }

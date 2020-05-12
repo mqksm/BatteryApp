@@ -11,7 +11,7 @@
         <scene sceneID="9Qe-hx-k4Z">
             <objects>
                 <tableViewController id="w47-aD-Nco" customClass="BatteryTableViewController" customModule="BatteryApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="33I-vh-pDY">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="33I-vh-pDY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -56,11 +56,67 @@
                                 <action selector="signOutTapped:" destination="w47-aD-Nco" id="7h9-Bt-luW"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Storage" id="weJ-Sc-hSn">
+                            <connections>
+                                <segue destination="W4q-0S-bjg" kind="show" identifier="segueStorage" id="HNG-Ge-9Wb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGk-J0-cC7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="77" y="-52"/>
+        </scene>
+        <!--Storage Table View Controller-->
+        <scene sceneID="BRa-XW-IBu">
+            <objects>
+                <tableViewController id="W4q-0S-bjg" customClass="StorageTableViewController" customModule="BatteryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MWd-O9-J2c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StorageCell" textLabel="k0i-Fk-dbM" detailTextLabel="bG0-Qp-WYP" style="IBUITableViewCellStyleSubtitle" id="IDQ-2z-9Ly">
+                                <rect key="frame" x="0.0" y="28" width="414" height="72.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IDQ-2z-9Ly" id="F3i-yl-6K0">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="72.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k0i-Fk-dbM">
+                                            <rect key="frame" x="20" y="9.5" width="42" height="24"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bG0-Qp-WYP">
+                                            <rect key="frame" x="20" y="37" width="67" height="24"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="W4q-0S-bjg" id="UGl-p7-wDc"/>
+                            <outlet property="delegate" destination="W4q-0S-bjg" id="KrX-H7-ev0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ggv-5S-biO">
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="p0t-cG-ZGO">
+                            <connections>
+                                <action selector="clearButtonTapped:" destination="W4q-0S-bjg" id="9gF-6o-2pa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mhe-Wh-6RN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935" y="-52"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CAj-4X-QeR">
@@ -125,7 +181,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="login" destination="3yM-Jg-vSd" eventType="touchUpInside" id="6hS-Rd-Ww4"/>
-                                                    <segue destination="2KO-Hq-p8a" kind="presentation" identifier="segueTableView" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="uU5-4p-HtK"/>
+                                                    <segue destination="2KO-Hq-p8a" kind="presentation" identifier="segueBatteryTableView" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="uU5-4p-HtK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="760-6j-bKW">
