@@ -64,13 +64,53 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        guard segue.identifier == "segueBatteryTableView" else { return }
         let navigationVC = segue.destination as! UINavigationController
         let batteryTVC = navigationVC.topViewController as! BatteryTableViewController
+        
+        if segue.identifier == "segueBatteryTableView" {
         batteryTVC.userName = loginField.text ?? ""
+        }
+        else if segue.identifier == "anon"{
+            batteryTVC.userName = "anon"
+        }
+        
+        
         
     }
     
+    
+    @IBAction func AnonymouslyTapped(_ sender: UIButton) {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let context = delegate.persistentContainer.viewContext
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        let predicates = NSPredicate(format: "%K == %@ AND %K == %@", argumentArray: ["login", "anon", "password", "anon"])
+        request.predicate = predicates
+        
+        do {
+            let result = try context.fetch(request) as! [NSManagedObject]
+            if result.count == 1 {
+                performSegue(withIdentifier: "anon", sender: self)
+            } else {
+                let entity = NSEntityDescription.insertNewObject(forEntityName: "User", into: context)
+                entity.setValue("anon", forKey: "login")
+                entity.setValue("anon", forKey: "password")
+                
+                do {
+                    try context.save()
+                    performSegue(withIdentifier: "anon", sender: self)
+                } catch {
+                }
+                
+            }
+        } catch {
+        }
+        
+        
+        
+        
+        
+    }
     
     
     

@@ -146,7 +146,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="oDQ-F1-pRk">
-                                <rect key="frame" x="40" y="346" width="334" height="214"/>
+                                <rect key="frame" x="40" y="321" width="334" height="264"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aa9-Fi-XDi">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="78"/>
@@ -170,7 +170,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ERd-8V-f5Z">
-                                        <rect key="frame" x="40" y="128" width="254" height="86"/>
+                                        <rect key="frame" x="40" y="128" width="254" height="136"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Y0-Vp-g9u">
                                                 <rect key="frame" x="0.0" y="0.0" width="254" height="36"/>
@@ -195,11 +195,24 @@
                                                     <segue destination="SRf-Ih-ZkM" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="cdM-ef-gGB"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4D-vv-Old">
+                                                <rect key="frame" x="0.0" y="102" width="254" height="34"/>
+                                                <color key="backgroundColor" red="0.97653549910000004" green="0.97631293539999997" blue="0.98431617019999995" alpha="0.72579225352112675" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Anonymously">
+                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="AnonymouslyTapped:" destination="3yM-Jg-vSd" eventType="touchUpInside" id="mGQ-BU-nMZ"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="760-6j-bKW" firstAttribute="leading" secondItem="ERd-8V-f5Z" secondAttribute="leading" id="1ZG-Iw-NUW"/>
+                                            <constraint firstItem="H4D-vv-Old" firstAttribute="leading" secondItem="ERd-8V-f5Z" secondAttribute="leading" id="3pq-I6-OyR"/>
                                             <constraint firstAttribute="trailing" secondItem="4Y0-Vp-g9u" secondAttribute="trailing" id="T1U-Kh-hul"/>
                                             <constraint firstItem="4Y0-Vp-g9u" firstAttribute="leading" secondItem="ERd-8V-f5Z" secondAttribute="leading" id="Xcq-no-ZBe"/>
+                                            <constraint firstAttribute="trailing" secondItem="H4D-vv-Old" secondAttribute="trailing" id="c8l-gk-aoH"/>
                                             <constraint firstAttribute="trailing" secondItem="760-6j-bKW" secondAttribute="trailing" id="nYF-NG-2Lu"/>
                                         </constraints>
                                     </stackView>
@@ -214,7 +227,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battery App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39O-h9-Am4">
-                                <rect key="frame" x="125.5" y="208" width="163" height="38.5"/>
+                                <rect key="frame" x="125.5" y="183" width="163" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -236,6 +249,7 @@
                     <connections>
                         <outlet property="loginField" destination="rRe-3I-Ire" id="bpD-MT-9T2"/>
                         <outlet property="passwordField" destination="ejA-TQ-lbp" id="aYx-e2-xd1"/>
+                        <segue destination="2KO-Hq-p8a" kind="presentation" identifier="anon" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="aVf-gU-21p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wK-Ps-osV" sceneMemberID="firstResponder"/>
@@ -348,6 +362,9 @@
             <point key="canvasLocation" x="-752" y="621"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="aVf-gU-21p"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Instagram" width="128" height="128"/>
     </resources>
