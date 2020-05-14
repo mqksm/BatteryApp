@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
         passwordField.text = ""
     }
     
-//    authorization
+    //    authorization
     @IBAction func login() {
         guard let login = loginField.text, let password = passwordField.text, loginField.text != "", passwordField.text != ""
             else { getAlert(message: "Fill all fields")
@@ -64,13 +64,16 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        let navigationVC = segue.destination as! UINavigationController
-        let batteryTVC = navigationVC.topViewController as! BatteryTableViewController
+        
         
         if segue.identifier == "segueBatteryTableView" {
-        batteryTVC.userName = loginField.text ?? ""
+            let navigationVC = segue.destination as! UINavigationController
+            let batteryTVC = navigationVC.topViewController as! BatteryTableViewController
+            batteryTVC.userName = loginField.text ?? ""
         }
         else if segue.identifier == "anon"{
+            let navigationVC = segue.destination as! UINavigationController
+            let batteryTVC = navigationVC.topViewController as! BatteryTableViewController
             batteryTVC.userName = "anon"
         }
         
